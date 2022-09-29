@@ -1,0 +1,24 @@
+class Solution:
+    def sumOddLengthSubarrays(self, arr: List[int]) -> int:
+
+        size=len(arr)
+        l2=[]
+        sum=0
+        odds=[]
+        for i in range(size+1):
+            if i%2!=0:
+                odds.append(i)
+        for i in odds:
+            for j in range(0,size):
+                if j+i<=size:
+                    l2.append(arr[j:j+i]) 
+        for i in l2:
+            for j in i:
+                sum+=j
+        return sum
+
+# 96 / 96 test cases passed.
+# Status: Accepted
+# Runtime: 125 ms
+# Memory Usage: 14.9 MB
+# Submission: 23/09/2022

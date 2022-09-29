@@ -1,0 +1,11 @@
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return sorted(nums)[-k]
+        
+
+        
+# 32 / 32 test cases passed.
+# Status: Accepted
+# Runtime: 131 ms
+# Memory Usage: 14.7 MB
+# submitted: 22/06/2022

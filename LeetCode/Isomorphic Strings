@@ -1,0 +1,21 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        key,value = [],[]
+        
+        for i in range(len(s)):
+            print(i," ",s[i])
+            if s[i] in key and value[key.index(s[i])] != t[i]:
+                return False
+            if t[i] in value and key[value.index(t[i])] != s[i]:
+                return False
+                
+            key.append(s[i])
+            value.append(t[i])
+        return True
+
+
+# 43 / 43 test cases passed.
+# Status: Accepted
+# Runtime: 668 ms
+# Memory Usage: 15.2 MB
+# Submitted: 22/09/2022

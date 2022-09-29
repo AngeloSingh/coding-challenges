@@ -1,0 +1,13 @@
+class Solution:
+    def buildArray(self, nums: List[int]) -> List[int]:
+        ans=[]
+        for i in range(len(nums)):
+            ans.append(nums[nums[i]])
+        return ans
+
+
+# 140 / 140 test cases passed.
+# Status: Accepted
+# Runtime: 167 ms
+# Memory Usage: 14.1 MB
+#Submitted: 15/08/2022
